@@ -12,6 +12,8 @@ jQuery ->
       $(this).addClass("selected")
   
   $("#pagination").on "click", ".prev", (e) ->
+    if pagenum <2 
+      $(".prev").attr("disabled","disabled") 
     if pagenum>1
       
       pagenum = pagenum - 1
@@ -19,16 +21,16 @@ jQuery ->
     $(".allpagecount").val(pagenum*4-4)
     $(".next").removeAttr('disabled');
      
-    if pagenum <2 
-      $(".prev").attr("disabled","disabled") 
+    
   $("#pagination").on "click", ".next", (e) ->
+    if pagenum == page
+      $(".next").attr("disabled","disabled") 
+    
     if pagenum <page
       $(".prev").removeAttr('disabled');
       pagenum = pagenum + 1
       $(".pagecount").val(pagenum)
       $(".allpagecount").val(pagenum*4-4)
-    if pagenum >page-1
-      $(".next").attr("disabled","disabled") 
      
   $(".body_left_job").on "click", ".cancel", (e) ->
     window.location.reload(true);
