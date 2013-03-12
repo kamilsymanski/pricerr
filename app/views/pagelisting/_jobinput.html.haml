@@ -3,7 +3,8 @@
   = form_tag pagelisting_jobresult_path, :remote => true, :method => 'get', :id => "inputing_frm" do
     %p Subject:
     %input{:type => 'text', :name => 'subject', :placeholder => 'Subject'}
-    
+    %p Image:
+    %input{:type =>"file"} 
     %p Description:
     %textarea.description{ :name => 'description', :placeholder => 'Description', :id => 'description'}
     
