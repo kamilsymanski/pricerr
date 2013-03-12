@@ -1,0 +1,9 @@
+= form_tag pagelisting_pagination_url, :remote => true, :method => 'get', :id => "inputing_frm" do
+  =submit_tag "<-- Prev", class: "prev"
+  %input.pagecount{:name =>"pagenum", :value => 1}
+  =submit_tag "Next -->", class: "next"
+  %input.allpagecount{:type => "hidden", :name =>"allpagecount", :value => 1}                        
+  %span All Jobs:
+  %input{:name =>"allpage", :value => "#{@allpage}", :class => "allpage"}  
+  %span All Pages:  
+  %input{:name =>"all", :value => "#{@allpage}", :class =>"all"}

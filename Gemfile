@@ -6,7 +6,7 @@ gem 'rails', '3.2.12'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'ruby_pagination_logic'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -15,6 +15,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'haml-rails'
   gem 'pg'
+  
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby

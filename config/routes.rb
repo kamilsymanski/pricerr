@@ -2,6 +2,15 @@ Pricerr::Application.routes.draw do
  
   
   root :to => 'pagelisting#index'
+  get "pagelisting/jobinput"
+  get "pagelisting/jobresult"
+  get "pagelisting/review"
+  get "pagelisting/cancel"
+  get "pagelisting/pagination"
+  
+  
+  
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

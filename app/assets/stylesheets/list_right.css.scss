@@ -1,0 +1,35 @@
+  .body_right{
+    width:24%;
+    margin:0px;
+    float:right;
+    border-radius:10px;
+    .top{
+      height:auto;
+      background-color:#D5F6FF;
+      padding:10px;
+      border-radius:5px;
+      margin-bottom:10px;
+      li{
+        color:#267B9A;
+        list-style:none;
+       cursor:auto;
+        margin:10px;
+      }
+      
+    }
+    .bottom{
+      height:auto;
+      background-color:white;
+      padding:10px;
+      border-radius:5px;
+      border:1px solid gray;
+      li{
+        color:#267B9A;
+        list-style:none;
+       cursor:auto;
+        margin:10px;
+      }
+      
+    }
+    
+  }

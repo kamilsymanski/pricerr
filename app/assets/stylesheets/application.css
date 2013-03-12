@@ -9,5 +9,21 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require list_header
+ *= require list_right
+ *= require list_body
  *= require_tree .
  */
+body{
+	background-color: #DCE6E4;
+}
+input{
+	border-radius:5px;
+}
+textarea{
+	border-radius:5px;
+	
+}
+.clear{
+    clear: both;
+  }

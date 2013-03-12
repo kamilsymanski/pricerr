@@ -1,0 +1,16 @@
+
+#review
+  %h2 I will #{@job.subject} for #{@job.price}$
+  %p Subject:
+  %p.job #{@job.subject}
+  .clear
+  %p Description:
+  %p.des.job #{@job.description}
+  .clear
+  %p price:
+  %p.job #{@job.price}$
+  .clear
+  = link_to "#",class:"back", remote: true, id: "btnfirst" do
+    Back  
+  
+ 

@@ -1,0 +1,17 @@
+#inputing_frm
+  %h1 Please Input job description! 
+  = form_tag pagelisting_jobresult_path, :remote => true, :method => 'get', :id => "inputing_frm" do
+    %p Subject:
+    %input{:type => 'text', :name => 'subject', :placeholder => 'Subject'}
+    
+    %p Description:
+    %textarea.description{ :name => 'description', :placeholder => 'Description', :id => 'description'}
+    
+    %p price:
+    %input{:type => 'text', :name => 'price', :placeholder => 'Price'}
+    %span $
+    .clear
+    
+    =submit_tag "Input Job", class: "btn btn-warning btn-large", id: "sendbutton"
+    = link_to "#" ,class:"cancel", remote: true, id: "btnfirst" do
+      Cancel

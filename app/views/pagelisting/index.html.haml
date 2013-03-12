@@ -1,2 +1,47 @@
-%h1 Pagelisting#index
-%p Find me in app/views/pagelisting/index.html.haml
+#wrapper
+  = render :partial => 'pagelisting/header'
+  #body
+    .body_left
+      .body_left_header
+        %h2 Pricerr is the best theme for microjob sites
+        %h2 Create a microjob site in minutes! 
+        %input.howwork{:type => "button", :value =>  "How does it work"}
+      .body_left_defalt
+        %p I will 
+        %input.text{ :placeholder =>"Begin to post jobs by typing here..."}
+        %p for $6.99
+        = link_to pagelisting_jobinput_path ,class:"continue", remote: true, id: "btnfirst" do
+          Continue
+      .clear
+      .body_left_job
+        .title
+          %h2 All Posted Jobs
+        .menu
+          = render :partial => 'pagelisting/menu'
+        .page
+          - @jobs.each do |job|
+            .page_section
+              .picture
+                %img{ :src =>"/assets/featured.png"}
+              .description
+                .subject
+                  = link_to pagelisting_review_url(id:job.id), class:"continue", remote: true, id: "btnfirst" do
+                    I will #{job.subject} for $#{job.price}
+                .job_des
+                  .job_long_des
+                    %p
+                      = msg_body( job.description )
+                      %span (by
+                      %a{:href => "#"}admin
+                      %span )
+                
+                .job_bottom
+                  %a.order_now{:href => "#"}Order now
+                  %a.read_more{:href => "#"}Read more
+                  %a.like_this_job{:href => "#"}Like this job
+                  .feedback
+        #pagination
+          = render :partial => 'pagelisting/part'
+    = render :partial => 'pagelisting/right'
+  #footer
+  

@@ -1,0 +1,23 @@
+
+- @jobs.each do |job|
+  .page_section
+    .picture
+      %img{ :src =>"/assets/featured.png"}
+    .description
+      .subject
+        = link_to pagelisting_review_url(id:job.id), class:"continue", remote: true, id: "btnfirst" do
+          I will #{job.subject} for $#{job.price}
+      .job_des
+        .job_long_des
+          %p
+            = msg_body( job.description )
+            %span (by
+            %a{:href => "#"}admin
+            %span )
+      
+      .job_bottom
+        %a.order_now{:href => "#"}Order now
+        %a.read_more{:href => "#"}Read more
+        %a.like_this_job{:href => "#"}Like this job
+        .feedback
+     
